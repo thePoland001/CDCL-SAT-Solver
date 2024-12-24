@@ -1,7 +1,7 @@
 # Copy and paste this code into Google Colab to try the SAT solver
 
 """
-Complete CDCL (Conflict-Driven Clause Learning) SAT Solver implementation.
+Complete CDCL SAT Solver implementation.
 Copy this entire file into a Colab notebook and run it 
 """
 class CDCLSolver:
