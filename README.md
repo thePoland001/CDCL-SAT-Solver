@@ -15,6 +15,6 @@ Installation
 No external dependencies required. Simply clone the repository:
 
 ```consol
-git clone https://github.com/yourusername/cdcl-sat-solver.git
+git clone https://github.com/thePoland001/cdcl-sat-solver.git
 cd cdcl-sat-solver
 ```
