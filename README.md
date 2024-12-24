@@ -1,6 +1,7 @@
 # CDCL SAT Solver
 A Python implementation of a modern CDCL (Conflict-Driven Clause Learning) SAT solver with VSIDS (Variable State Independent Decaying Sum) decision heuristic and phase saving.
-Features
+
+# Features
 
 ✨ CDCL (Conflict-Driven Clause Learning)
 
