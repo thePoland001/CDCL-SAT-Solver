@@ -25,12 +25,10 @@ class CDCLSolver:
         self.saved_phases = {}      
         
     def log(self, message):
-        """Debug logging."""
         if self.debug:
             print(f"DEBUG: {message}")
             
     def add_clause(self, clause):
-        """Add a new clause to the formula."""
         print(f"Adding clause: {clause}")
         self.clauses.append(clause)
         self.log(f"Added clause: {clause}")
@@ -54,11 +52,9 @@ class CDCLSolver:
             self.var_inc *= 1e-100
             
     def _decay_variables(self):
-        """Decay all VSIDS scores."""
         self.var_inc *= (1.0 / self.var_decay)
             
     def _find_unit_clause(self):
-        """Find a unit clause and its forcing literal."""
         for clause in self.clauses + self.learned_clauses:
             unassigned = []
             is_satisfied = False
@@ -78,7 +74,6 @@ class CDCLSolver:
         return None, None
             
     def _unit_propagation(self):
-        """Perform unit propagation with conflict detection."""
         while True:
             unit_lit, reason = self._find_unit_clause()
             if unit_lit is None:
@@ -103,7 +98,6 @@ class CDCLSolver:
         return True, None
             
     def _analyze_conflict(self, conflict_clause):
-        """Analyze conflict and learn new clause."""
         self.log(f"Analyzing conflict from clause: {conflict_clause}")
         
         # Tracking variables from current decision level
@@ -148,7 +142,6 @@ class CDCLSolver:
         return other_level_lits
             
     def _backtrack(self, level):
-        """Backtrack to given decision level."""
         self.log(f"Backtracking to level {level}")
         
         for var in list(self.assignments.keys()):
