@@ -1,8 +1,5 @@
 # Copy and paste this code into Google Colab to try the SAT solver
 
-"""
-Complete CDCL SAT Solver implementation.
-"""
 class CDCLSolver:
     def __init__(self, debug=True):
         print("Initializing solver...")
