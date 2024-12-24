@@ -49,7 +49,7 @@ else:
 ```
 
 # Example Output
-```python
+```consol
 DEBUG: Starting solve
 DEBUG: Decision: set 2 to True at level 1 (activity: 3.00)
 DEBUG: Unit propagation: set 3 to False at level 1
