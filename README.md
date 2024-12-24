@@ -5,9 +5,13 @@ Features
 ✨ CDCL (Conflict-Driven Clause Learning)
 
 📊 VSIDS scoring for intelligent variable selection
+
 🔄 Phase saving for better search efficiency
+
 ⚡ Non-chronological backtracking
+
 🔍 Unit propagation
+
 📝 Detailed debugging output
 
 # Installation
