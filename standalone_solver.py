@@ -2,7 +2,6 @@
 
 """
 Complete CDCL SAT Solver implementation.
-Copy this entire file into a Colab notebook and run it 
 """
 class CDCLSolver:
     def __init__(self, debug=True):
