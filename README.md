@@ -50,12 +50,73 @@ else:
 
 # Example Output
 ```consol
+Starting tests...
+
+==================================================
+Testing: Simple SAT case
+Initializing solver...
+Adding clause: [1, 2]
+DEBUG: Added clause: [1, 2]
+Adding clause: [-1, 3]
+DEBUG: Added clause: [-1, 3]
+Adding clause: [-2, -3]
+DEBUG: Added clause: [-2, -3]
+Adding clause: [2, 3]
+DEBUG: Added clause: [2, 3]
+Starting solve...
 DEBUG: Starting solve
 DEBUG: Decision: set 2 to True at level 1 (activity: 3.00)
 DEBUG: Unit propagation: set 3 to False at level 1
 DEBUG: Unit propagation: set 1 to False at level 1
+DEBUG: Solution found - SAT
 Is satisfiable? True
 Assignment: {2: True, 3: False, 1: False}
+Solution verification: PASSED
+
+==================================================
+Testing: UNSAT case
+Initializing solver...
+Adding clause: [1, 2]
+DEBUG: Added clause: [1, 2]
+Adding clause: [1, -2]
+DEBUG: Added clause: [1, -2]
+Adding clause: [-1, 2]
+DEBUG: Added clause: [-1, 2]
+Adding clause: [-1, -2]
+DEBUG: Added clause: [-1, -2]
+Starting solve...
+DEBUG: Starting solve
+DEBUG: Decision: set 1 to True at level 1 (activity: 4.00)
+DEBUG: Unit propagation: set 2 to True at level 1
+Is satisfiable? False
+
+==================================================
+Testing: Complex SAT case
+Initializing solver...
+Adding clause: [1, 2, 3]
+DEBUG: Added clause: [1, 2, 3]
+Adding clause: [-1, 2, 4]
+DEBUG: Added clause: [-1, 2, 4]
+Adding clause: [-2, 3, 4]
+DEBUG: Added clause: [-2, 3, 4]
+Adding clause: [-3, -4]
+DEBUG: Added clause: [-3, -4]
+Adding clause: [1, -2]
+DEBUG: Added clause: [1, -2]
+Adding clause: [2, -3]
+DEBUG: Added clause: [2, -3]
+Adding clause: [3, -4]
+DEBUG: Added clause: [3, -4]
+Starting solve...
+DEBUG: Starting solve
+DEBUG: Decision: set 2 to True at level 1 (activity: 5.00)
+DEBUG: Unit propagation: set 1 to True at level 1
+DEBUG: Decision: set 3 to True at level 2 (activity: 5.00)
+DEBUG: Unit propagation: set 4 to False at level 2
+DEBUG: Solution found - SAT
+Is satisfiable? True
+Assignment: {2: True, 1: True, 3: True, 4: False}
+Solution verification: PASSED
 ```
 
 Check the examples.py file for more usage examples
