@@ -3,6 +3,7 @@ A Python implementation of a modern CDCL (Conflict-Driven Clause Learning) SAT s
 Features
 
 ✨ CDCL (Conflict-Driven Clause Learning)
+
 📊 VSIDS scoring for intelligent variable selection
 🔄 Phase saving for better search efficiency
 ⚡ Non-chronological backtracking
